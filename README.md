@@ -73,3 +73,12 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+## Controllers 
+ - Resources  - [Docs](https://docs.nestjs.com/controllers)
+ - Controllers are responsible for handling incoming requests and returning responses to the client.
+ - A DTO (Data Transfer Object) is an object that defines how the data will be sent over the network.
+ - To create a controller using the CLI, simply execute the command.
+  ```
+  $ nest g controller `<controllerName/>` 
+  ```
