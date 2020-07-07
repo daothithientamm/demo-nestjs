@@ -24,9 +24,10 @@
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "commander": "^5.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.6.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
@@ -43,12 +44,14 @@
     "eslint-plugin-import": "^2.20.1",
     "jest": "26.0.1",
     "prettier": "^1.19.1",
+    "start-server-webpack-plugin": "^2.2.5",
     "supertest": "^4.0.2",
     "ts-jest": "26.1.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "webpack-node-externals": "^1.7.2"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -63,5 +66,6 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "start:dev": "nest build --webpack --webpackPath webpack-hmr.config.js"
 }
