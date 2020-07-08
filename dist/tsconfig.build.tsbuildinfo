@@ -1157,23 +1157,33 @@
         "affectsGlobalScope": false
       },
       "../src/cats/dto/create-cat.dto.ts": {
-        "version": "866717c581e2ee5b1a9fa7baeac5d10389e4b6db3171417d4800bc353037eb80",
-        "signature": "e655259a12d823de09977f235c7ec573f92f7f7c86768a7a5a03fccd785d81a9",
+        "version": "71a3d47f866751b6c410c4f6db64aa10ec719507c714377647460c516d2dfe60",
+        "signature": "5819249fe7d86fe42019ebe2295c736800565343d807bf4a2080bc351bf74f18",
         "affectsGlobalScope": false
       },
       "../src/cats/dto/update-cat.dto.ts": {
-        "version": "eeddecaffe80b807bb0b73657c95154906987ee0504938e48bd17554c1d7daa1",
-        "signature": "c0d14ece13b0c707e44c94ed047b6ad5c2ae76a02c85141fff3890c903b3feb4",
+        "version": "46e1417f03b746e342f5d21eb3fb194a4623277818eceea5b8911d5585f94857",
+        "signature": "009eed8645b2cec6ad4ccc04eb7b4602933e4da30d298bc6e2ad9fad15ce7ee6",
         "affectsGlobalScope": false
       },
       "../src/cats/dto/list-all-entities.dto.ts": {
-        "version": "a33bea7d9f88288a4f3d83dcd50391b11f89e61326d21a3749b32001dd28952a",
-        "signature": "8fae58195e5a879761d7323cb9336fc2132c73c1b4de9f8eb1798d72a5dcba1f",
+        "version": "b3baee6e97a628f0f143cf0b75b83160a8adfd7136ec58d36e680200625b1f01",
+        "signature": "06d4b27822ce5f56945380915384f88eaa2b3b6d1043ea1746298bfeb6382dfa",
         "affectsGlobalScope": false
       },
       "../src/cats/dto/index.ts": {
         "version": "15983ea4a452349013dabdb36804d0ffc8dd1ce63da5923ebb64abffe346fd10",
         "signature": "5615a4a2052f9ac61f91ff22d1539f90f318cde32a7cfc9a90ce1c96a3df4bdd",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/interfaces/cat.interface.ts": {
+        "version": "58fcffd5e3e275f9ccb1fd84c75a3e22bf2fbb80efb92031790496a1b23ba4c1",
+        "signature": "d5533769ba3bd69689a9095b571703fab6224fb51c9bfa918a5dba73074bcec4",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/cats.service.ts": {
+        "version": "5f9d0ef4a453fddc4f6fdde577f2eff47a10d61dcd90c54cb80fd153241b5844",
+        "signature": "2722262148e75f01cb12ff82bb85362fa830cabde35fd39fd3166ce66c735c27",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -1467,12 +1477,12 @@
         "affectsGlobalScope": false
       },
       "../src/cats/cats.controller.ts": {
-        "version": "ad59d75b26ec03b1ab21ede1a571ee1c45652ba71bf3bf3b8ed9ea74e0f821c4",
-        "signature": "cf4df44d49b6e4af4143cde3a2cbfdbb53023cff58bacc73f2a4bed543534b98",
+        "version": "9e2392246fdae03382cedad8844f05975d7b7fb48d537f6df73880f077fb9c4a",
+        "signature": "679ab0febe848be8ca72028e9babac8ee8c6be1f5b5a7850e2ce4e13ee757663",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "a573ddf3bb576d42ca92ea215c86c93ed39e0925ade5f60bd7e54b42211a32aa",
+        "version": "7e45e5571aefb4fb11833886a27198116678393b405a2497594a3fd3310a06be",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5136,7 +5146,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/cats/cats.controller.ts"
+        "../src/cats/cats.controller.ts",
+        "../src/cats/cats.service.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5154,7 +5165,18 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../src/cats/dto/index.ts"
+        "../src/cats/cats.service.ts",
+        "../src/cats/dto/index.ts",
+        "../src/cats/interfaces/cat.interface.ts"
+      ],
+      "../src/cats/cats.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/cats/interfaces/cat.interface.ts"
       ],
       "../src/cats/dto/create-cat.dto.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -5181,6 +5203,13 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/cats/dto/update-cat.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/cats/interfaces/cat.interface.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -8444,7 +8473,12 @@
       ],
       "../src/cats/cats.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
-        "../src/cats/dto/index.ts"
+        "../src/cats/cats.service.ts",
+        "../src/cats/dto/index.ts",
+        "../src/cats/interfaces/cat.interface.ts"
+      ],
+      "../src/cats/cats.service.ts": [
+        "../src/cats/interfaces/cat.interface.ts"
       ],
       "../src/cats/dto/index.ts": [
         "../src/cats/dto/create-cat.dto.ts",
@@ -8820,10 +8854,12 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/cats/cats.controller.ts",
+      "../src/cats/cats.service.ts",
       "../src/cats/dto/create-cat.dto.ts",
       "../src/cats/dto/index.ts",
       "../src/cats/dto/list-all-entities.dto.ts",
       "../src/cats/dto/update-cat.dto.ts",
+      "../src/cats/interfaces/cat.interface.ts",
       "../src/main.ts"
     ]
   },

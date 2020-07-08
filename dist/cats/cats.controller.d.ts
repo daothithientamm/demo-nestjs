@@ -1,10 +1,14 @@
-import { CreateCatDto, UpdateCatDto, ListAllEntities } from "./dto";
+import { CreateCatDto, UpdateCatDto } from "./dto";
+import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
 import { Response } from "express";
 export declare class CatsController {
-    create(createCatDto: CreateCatDto, res: Response): void;
-    findAll(query: ListAllEntities): string;
+    private catsService;
+    constructor(catsService: CatsService);
+    create(createCatDto: CreateCatDto, res: Response): Promise<void>;
+    findAll(): Promise<Cat[]>;
     find(): string;
-    findOne(id: string): string;
-    update(id: string, updateCatDto: UpdateCatDto): string;
+    findOne(id: string): Promise<Object>;
+    update(id: string, updateCatDto: UpdateCatDto): Promise<Cat[]>;
     remove(id: string): string;
 }
