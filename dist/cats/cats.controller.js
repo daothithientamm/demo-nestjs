@@ -15,24 +15,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatsController = void 0;
 const common_1 = require("@nestjs/common");
 const dto_1 = require("./dto");
+const cats_service_1 = require("./cats.service");
 let CatsController = class CatsController {
-    create(createCatDto, res) {
-        console.log(createCatDto);
+    constructor(catsService) {
+        this.catsService = catsService;
+    }
+    async create(createCatDto, res) {
+        this.catsService.create(createCatDto);
         res
             .status(common_1.HttpStatus.CREATED)
             .json({ message: "This action adds a new cat" });
     }
-    findAll(query) {
-        return `This action returns all cats (limit: ${query["limit"]} items)`;
+    async findAll() {
+        return this.catsService.findAll();
     }
     find() {
         return "This route uses a wildcard";
     }
-    findOne(id) {
-        return `This action returns a #${id} cat`;
+    async findOne(id) {
+        return this.catsService.findOne(id);
     }
-    update(id, updateCatDto) {
-        return `This action updates a #${id} cat`;
+    async update(id, updateCatDto) {
+        this.catsService.updateOne(id, updateCatDto);
+        return this.catsService.findAll();
     }
     remove(id) {
         return `This action removes a #${id} cat`;
@@ -43,15 +48,13 @@ __decorate([
     __param(0, common_1.Body()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [dto_1.CreateCatDto, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], CatsController.prototype, "create", null);
 __decorate([
     common_1.Get(),
-    common_1.HttpCode(203),
-    __param(0, common_1.Query()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [dto_1.ListAllEntities]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
 ], CatsController.prototype, "findAll", null);
 __decorate([
     common_1.Get("ab*cd"),
@@ -62,18 +65,17 @@ __decorate([
 ], CatsController.prototype, "find", null);
 __decorate([
     common_1.Get(":id"),
-    common_1.Redirect('https://nestjs.com', common_1.HttpStatus.MOVED_PERMANENTLY),
     __param(0, common_1.Param("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], CatsController.prototype, "findOne", null);
 __decorate([
     common_1.Put(":id"),
     __param(0, common_1.Param("id")), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, dto_1.UpdateCatDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], CatsController.prototype, "update", null);
 __decorate([
     common_1.Delete(":id"),
@@ -83,7 +85,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], CatsController.prototype, "remove", null);
 CatsController = __decorate([
-    common_1.Controller("cats")
+    common_1.Controller("cats"),
+    __metadata("design:paramtypes", [cats_service_1.CatsService])
 ], CatsController);
 exports.CatsController = CatsController;
 //# sourceMappingURL=cats.controller.js.map

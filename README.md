@@ -80,5 +80,15 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
  - A DTO (Data Transfer Object) is an object that defines how the data will be sent over the network.
  - To create a controller using the CLI, simply execute the command.
   ```
-  $ nest g controller `<controllerName/>` 
+  $ nest g controller <ObjectName/>
   ```
+
+## Provides
+ - A provider is simply a class annotated with an @Injectable() decorator.
+ - Many of the basic Nest classes may be treated as a provider – services, repositories, factories, helpers, and so on.
+ - <b>Services:</b> will be responsible for data storage and retrieval, and is designed to be used by the `controller`
+  - To create a service using the CLI, simply execute the command.
+  ```
+  $ nest g service <ObjectName>
+  ```
+  - <b>Dependency injection:</b> the use of the `private` syntax. This shorthand allows us to both declare and initialize the `<Service>` member immediately in the same location

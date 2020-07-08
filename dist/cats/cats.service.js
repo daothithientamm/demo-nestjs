@@ -6,20 +6,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.CatsService = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const cats_controller_1 = require("./cats/cats.controller");
-const cats_service_1 = require("./cats/cats.service");
-let AppModule = class AppModule {
+let CatsService = class CatsService {
+    constructor() {
+        this.cats = [];
+    }
+    create(cat) {
+        this.cats.push(cat);
+    }
+    findAll() {
+        return this.cats;
+    }
+    findOne(id) {
+        const cat = this.cats.find(x => x.id === id);
+        return cat;
+    }
+    updateOne(id, data) {
+        const catIndex = this.cats.findIndex(x => x.id === id);
+        if (catIndex !== -1)
+            this.cats[catIndex] = Object.assign(Object.assign({}, this.cats[catIndex]), data);
+    }
 };
-AppModule = __decorate([
-    common_1.Module({
-        imports: [],
-        controllers: [app_controller_1.AppController, cats_controller_1.CatsController],
-        providers: [app_service_1.AppService, cats_service_1.CatsService],
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+CatsService = __decorate([
+    common_1.Injectable()
+], CatsService);
+exports.CatsService = CatsService;
+//# sourceMappingURL=cats.service.js.map

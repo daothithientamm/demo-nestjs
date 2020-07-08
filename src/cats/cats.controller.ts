@@ -14,23 +14,25 @@ import {
   Redirect
 } from "@nestjs/common";
 import { CreateCatDto, UpdateCatDto, ListAllEntities } from "./dto";
+import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
 import { Response } from "express";
 
 @Controller("cats")
 export class CatsController {
+  constructor(private catsService: CatsService) {}
+
   @Post()
-  create(@Body() createCatDto: CreateCatDto, @Res() res: Response) {
-    console.log(createCatDto);
+  async create(@Body() createCatDto: CreateCatDto, @Res() res: Response) {
+    this.catsService.create(createCatDto);
     res
       .status(HttpStatus.CREATED)
       .json({ message: "This action adds a new cat" });
   }
 
   @Get()
-  // send any http code to client
-  @HttpCode(203)
-  findAll(@Query() query: ListAllEntities) {
-    return `This action returns all cats (limit: ${query["limit"]} items)`;
+  async findAll(): Promise<Cat[]> {
+    return this.catsService.findAll();
   }
 
   @Get("ab*cd")
@@ -41,15 +43,14 @@ export class CatsController {
   }
 
   @Get(":id")
-  // http status has default value is 302
-  @Redirect('https://nestjs.com', HttpStatus.MOVED_PERMANENTLY)
-  findOne(@Param("id") id: string) {
-    return `This action returns a #${id} cat`;
+  async findOne(@Param("id") id: string): Promise<Object>  {
+    return this.catsService.findOne(id);
   }
 
   @Put(":id")
-  update(@Param("id") id: string, @Body() updateCatDto: UpdateCatDto) {
-    return `This action updates a #${id} cat`;
+  async update(@Param("id") id: string, @Body() updateCatDto: UpdateCatDto) {
+    this.catsService.updateOne(id, updateCatDto);
+    return this.catsService.findAll();
   }
 
   @Delete(":id")
