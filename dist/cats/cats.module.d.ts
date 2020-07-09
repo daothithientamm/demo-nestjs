@@ -1,5 +1,4 @@
-import { CatsService } from './cats.service';
-export declare class CatsModule {
-    private readonly catsService;
-    constructor(catsService: CatsService);
+import { NestModule, MiddlewareConsumer } from '@nestjs/common';
+export declare class CatsModule implements NestModule {
+    configure(consumer: MiddlewareConsumer): void;
 }

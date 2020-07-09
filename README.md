@@ -46,27 +46,13 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
-
 ## Controllers 
  - Resources  - [Docs](https://docs.nestjs.com/controllers)
  - Controllers are responsible for handling incoming requests and returning responses to the client.
  - A DTO (Data Transfer Object) is an object that defines how the data will be sent over the network.
  - To create a controller using the CLI, simply execute the command.
   ```
-  $ nest g controller <ObjectName/>
+  $ nest g controller <ObjectName>
   ```
 
 ## Provides
@@ -95,3 +81,16 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
     * Modules are <b>singletons</b> by default.
     * Every module is automatically a shared module. 
     * Once created it can be reused by any module.
+
+## Middleware 
+ - Middleware is a function which is called before the route handler
+ - Middleware functions can perform the following tasks:
+    * execute any code.
+    * make changes to the request and the response objects.
+    * end the request-response cycle.
+    * call the next middleware function in the stack.
+    * if the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+ - To create a middleware using the CLI, simply execute the command.
+  ```
+  $ nest g middleware <ObjectName>
+  ```

@@ -10,7 +10,6 @@ import {
   Res,
   HttpCode,
   Header,
-  Redirect
 } from "@nestjs/common";
 import { CreateCatDto, UpdateCatDto } from "./dto";
 import { CatsService } from './cats.service';
@@ -30,6 +29,7 @@ export class CatsController {
   }
 
   @Get()
+  @HttpCode(200)
   async findAll(): Promise<Cat[]> {
     return this.catsService.findAll();
   }
