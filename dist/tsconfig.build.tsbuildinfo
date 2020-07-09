@@ -1477,12 +1477,17 @@
         "affectsGlobalScope": false
       },
       "../src/cats/cats.controller.ts": {
-        "version": "9e2392246fdae03382cedad8844f05975d7b7fb48d537f6df73880f077fb9c4a",
+        "version": "d6f9757c827e62f1fb73fc540f624da8b4b51a90d3908b28d8c0ca7dc2fe0317",
         "signature": "679ab0febe848be8ca72028e9babac8ee8c6be1f5b5a7850e2ce4e13ee757663",
         "affectsGlobalScope": false
       },
+      "../src/cats/cats.module.ts": {
+        "version": "5f8a78a7f9b9a67e84349b0abd5349b004267095121323d26d06cd3cacf7e417",
+        "signature": "b78eec4d5b55de98c36c202ad3413dfa4f01ba71b56d834c4f619b931fdb9346",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "7e45e5571aefb4fb11833886a27198116678393b405a2497594a3fd3310a06be",
+        "version": "5f0c6fefef480bd98bcadbbf0bfbfcac78c6d6a4419c79831c0d0c6c7a754d4d",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -5146,8 +5151,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/cats/cats.controller.ts",
-        "../src/cats/cats.service.ts"
+        "../src/cats/cats.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5168,6 +5172,16 @@
         "../src/cats/cats.service.ts",
         "../src/cats/dto/index.ts",
         "../src/cats/interfaces/cat.interface.ts"
+      ],
+      "../src/cats/cats.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/cats/cats.controller.ts",
+        "../src/cats/cats.service.ts"
       ],
       "../src/cats/cats.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8477,6 +8491,9 @@
         "../src/cats/dto/index.ts",
         "../src/cats/interfaces/cat.interface.ts"
       ],
+      "../src/cats/cats.module.ts": [
+        "../src/cats/cats.service.ts"
+      ],
       "../src/cats/cats.service.ts": [
         "../src/cats/interfaces/cat.interface.ts"
       ],
@@ -8854,6 +8871,7 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/cats/cats.controller.ts",
+      "../src/cats/cats.module.ts",
       "../src/cats/cats.service.ts",
       "../src/cats/dto/create-cat.dto.ts",
       "../src/cats/dto/index.ts",
