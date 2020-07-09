@@ -2,7 +2,6 @@ import {
   Controller,
   Get,
   Post,
-  Query,
   Body,
   Param,
   Put,
@@ -13,7 +12,7 @@ import {
   Header,
   Redirect
 } from "@nestjs/common";
-import { CreateCatDto, UpdateCatDto, ListAllEntities } from "./dto";
+import { CreateCatDto, UpdateCatDto } from "./dto";
 import { CatsService } from './cats.service';
 import { Cat } from './interfaces/cat.interface';
 import { Response } from "express";
