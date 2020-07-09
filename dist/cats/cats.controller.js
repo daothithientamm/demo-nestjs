@@ -52,6 +52,7 @@ __decorate([
 ], CatsController.prototype, "create", null);
 __decorate([
     common_1.Get(),
+    common_1.HttpCode(200),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)

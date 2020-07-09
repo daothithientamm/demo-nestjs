@@ -1156,36 +1156,6 @@
         "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140",
         "affectsGlobalScope": false
       },
-      "../src/cats/dto/create-cat.dto.ts": {
-        "version": "71a3d47f866751b6c410c4f6db64aa10ec719507c714377647460c516d2dfe60",
-        "signature": "5819249fe7d86fe42019ebe2295c736800565343d807bf4a2080bc351bf74f18",
-        "affectsGlobalScope": false
-      },
-      "../src/cats/dto/update-cat.dto.ts": {
-        "version": "46e1417f03b746e342f5d21eb3fb194a4623277818eceea5b8911d5585f94857",
-        "signature": "009eed8645b2cec6ad4ccc04eb7b4602933e4da30d298bc6e2ad9fad15ce7ee6",
-        "affectsGlobalScope": false
-      },
-      "../src/cats/dto/list-all-entities.dto.ts": {
-        "version": "b3baee6e97a628f0f143cf0b75b83160a8adfd7136ec58d36e680200625b1f01",
-        "signature": "06d4b27822ce5f56945380915384f88eaa2b3b6d1043ea1746298bfeb6382dfa",
-        "affectsGlobalScope": false
-      },
-      "../src/cats/dto/index.ts": {
-        "version": "15983ea4a452349013dabdb36804d0ffc8dd1ce63da5923ebb64abffe346fd10",
-        "signature": "5615a4a2052f9ac61f91ff22d1539f90f318cde32a7cfc9a90ce1c96a3df4bdd",
-        "affectsGlobalScope": false
-      },
-      "../src/cats/interfaces/cat.interface.ts": {
-        "version": "58fcffd5e3e275f9ccb1fd84c75a3e22bf2fbb80efb92031790496a1b23ba4c1",
-        "signature": "d5533769ba3bd69689a9095b571703fab6224fb51c9bfa918a5dba73074bcec4",
-        "affectsGlobalScope": false
-      },
-      "../src/cats/cats.service.ts": {
-        "version": "5f9d0ef4a453fddc4f6fdde577f2eff47a10d61dcd90c54cb80fd153241b5844",
-        "signature": "2722262148e75f01cb12ff82bb85362fa830cabde35fd39fd3166ce66c735c27",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "0a08f81d125dd658353234b6553bf48baa0104257f939f83dcd696a320cf5543",
         "signature": "0a08f81d125dd658353234b6553bf48baa0104257f939f83dcd696a320cf5543",
@@ -1476,19 +1446,74 @@
         "signature": "ead1ed9dd4874f4907a506a31e4fe9c4e079b42816f6b7ea5016a6d5ddf2fde3",
         "affectsGlobalScope": false
       },
+      "../node_modules/http-status/lib/index.d.ts": {
+        "version": "88b8fba83589f46616de72cae81c4a54da17a7c8c007601826fe22b16c3f666d",
+        "signature": "88b8fba83589f46616de72cae81c4a54da17a7c8c007601826fe22b16c3f666d",
+        "affectsGlobalScope": false
+      },
+      "../src/common/middleware/logger.middleware.ts": {
+        "version": "af9fc6d748a8adf329ff0464fb1901bd0ccf595e78e24c7404e54e084bc7a056",
+        "signature": "8a158b263fb991417d9c1b6e2ddda81c4fc9fee67a4b355e84df2e49c0191e28",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/dto/create-cat.dto.ts": {
+        "version": "71a3d47f866751b6c410c4f6db64aa10ec719507c714377647460c516d2dfe60",
+        "signature": "5819249fe7d86fe42019ebe2295c736800565343d807bf4a2080bc351bf74f18",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/dto/update-cat.dto.ts": {
+        "version": "46e1417f03b746e342f5d21eb3fb194a4623277818eceea5b8911d5585f94857",
+        "signature": "009eed8645b2cec6ad4ccc04eb7b4602933e4da30d298bc6e2ad9fad15ce7ee6",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/dto/list-all-entities.dto.ts": {
+        "version": "b3baee6e97a628f0f143cf0b75b83160a8adfd7136ec58d36e680200625b1f01",
+        "signature": "06d4b27822ce5f56945380915384f88eaa2b3b6d1043ea1746298bfeb6382dfa",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/dto/index.ts": {
+        "version": "15983ea4a452349013dabdb36804d0ffc8dd1ce63da5923ebb64abffe346fd10",
+        "signature": "5615a4a2052f9ac61f91ff22d1539f90f318cde32a7cfc9a90ce1c96a3df4bdd",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/interfaces/cat.interface.ts": {
+        "version": "58fcffd5e3e275f9ccb1fd84c75a3e22bf2fbb80efb92031790496a1b23ba4c1",
+        "signature": "d5533769ba3bd69689a9095b571703fab6224fb51c9bfa918a5dba73074bcec4",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/cats.service.ts": {
+        "version": "5f9d0ef4a453fddc4f6fdde577f2eff47a10d61dcd90c54cb80fd153241b5844",
+        "signature": "2722262148e75f01cb12ff82bb85362fa830cabde35fd39fd3166ce66c735c27",
+        "affectsGlobalScope": false
+      },
       "../src/cats/cats.controller.ts": {
-        "version": "d6f9757c827e62f1fb73fc540f624da8b4b51a90d3908b28d8c0ca7dc2fe0317",
+        "version": "5eff383b85b34ae106b701177d9f627381bc6402b82956ac8b8d97c6bad1385c",
         "signature": "679ab0febe848be8ca72028e9babac8ee8c6be1f5b5a7850e2ce4e13ee757663",
         "affectsGlobalScope": false
       },
+      "../src/config/whitelist.ts": {
+        "version": "cf97176019229cb8a92448b8693abf876e44fab106b71539da0b8751e3ffdec9",
+        "signature": "b27283cbc413b9dfae32ce60a8b47a15e626ef33685938a00f0052f7c993d2df",
+        "affectsGlobalScope": false
+      },
+      "../src/utils/filterBody.ts": {
+        "version": "1d699d52443120b444f1a4149db593602438254c49a1e3e107c9852214728bca",
+        "signature": "25641ca0451d6a81792afcad6db2585498e24d635f5035775a24af7e3e5669b6",
+        "affectsGlobalScope": false
+      },
+      "../src/cats/middleware/create.middleware.ts": {
+        "version": "db10bac931803cdd2f3efaedb59cbe241a372584c1828209353b2b3dbd2563f6",
+        "signature": "1856352881f8edf115ee414f49d66acefc47eab457e86beafac304fa07da5b1b",
+        "affectsGlobalScope": false
+      },
       "../src/cats/cats.module.ts": {
-        "version": "5f8a78a7f9b9a67e84349b0abd5349b004267095121323d26d06cd3cacf7e417",
-        "signature": "b78eec4d5b55de98c36c202ad3413dfa4f01ba71b56d834c4f619b931fdb9346",
+        "version": "2eb2b3ca7f36ba7e200ca8943d5c70e5e8286251fe21a11a04553b6202b218ab",
+        "signature": "18c1015dab7c1e43586b713d0dc4d9c36e24f4d4b9a70c4ed7ca7bdac952e9bc",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "5f0c6fefef480bd98bcadbbf0bfbfcac78c6d6a4419c79831c0d0c6c7a754d4d",
-        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
+        "version": "9c124370e124917870cf3655c3dbc428b16f0109d455fb292b0c0ae44f2c7eb1",
+        "signature": "c5d8d8d09bab9c1856515cc770847e363c0b18db26dc3e48f4c5c883c9cff7ff",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -4258,6 +4283,13 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/http-status/lib/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/reflect-metadata/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -5151,7 +5183,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/cats/cats.module.ts"
+        "../src/cats/cats.module.ts",
+        "../src/common/middleware/logger.middleware.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5181,7 +5214,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/cats/cats.controller.ts",
-        "../src/cats/cats.service.ts"
+        "../src/cats/cats.service.ts",
+        "../src/cats/middleware/create.middleware.ts"
       ],
       "../src/cats/cats.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5230,6 +5264,35 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/cats/middleware/create.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/http-status/lib/index.d.ts",
+        "../src/config/whitelist.ts",
+        "../src/utils/filterBody.ts"
+      ],
+      "../src/common/middleware/logger.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/http-status/lib/index.d.ts"
+      ],
+      "../src/config/whitelist.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -5238,6 +5301,13 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/utils/filterBody.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -7607,6 +7677,13 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/http-status/lib/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/reflect-metadata/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -8485,6 +8562,9 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/app.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
       "../src/cats/cats.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/cats/cats.service.ts",
@@ -8492,7 +8572,7 @@
         "../src/cats/interfaces/cat.interface.ts"
       ],
       "../src/cats/cats.module.ts": [
-        "../src/cats/cats.service.ts"
+        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/cats/cats.service.ts": [
         "../src/cats/interfaces/cat.interface.ts"
@@ -8501,6 +8581,14 @@
         "../src/cats/dto/create-cat.dto.ts",
         "../src/cats/dto/list-all-entities.dto.ts",
         "../src/cats/dto/update-cat.dto.ts"
+      ],
+      "../src/cats/middleware/create.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
+      ],
+      "../src/common/middleware/logger.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -8769,6 +8857,7 @@
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
       "../node_modules/axios/index.d.ts",
+      "../node_modules/http-status/lib/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
       "../node_modules/rxjs/internal/AsyncSubject.d.ts",
@@ -8878,7 +8967,11 @@
       "../src/cats/dto/list-all-entities.dto.ts",
       "../src/cats/dto/update-cat.dto.ts",
       "../src/cats/interfaces/cat.interface.ts",
-      "../src/main.ts"
+      "../src/cats/middleware/create.middleware.ts",
+      "../src/common/middleware/logger.middleware.ts",
+      "../src/config/whitelist.ts",
+      "../src/main.ts",
+      "../src/utils/filterBody.ts"
     ]
   },
   "version": "3.9.6"
